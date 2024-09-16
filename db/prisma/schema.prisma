@@ -29,7 +29,7 @@ model OnRampTransactions {
   provider        String //bank provider like sbi axis etc
   amount          Int
   startTime       DateTime
-  userId Int
+  userId          Int
   user            User      @relation(fields: [userId], references: [id])
 }
 
