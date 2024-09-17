@@ -2,11 +2,16 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 
 import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
+import { Suspense, useEffect, useState } from "react";
 
 
-export default function AppbarClient(){
+ function AppbarClient(){
+
+
     const session = useSession();
     const router = useRouter();
+    
 return(
     <div>
 <Appbar onSignin={signIn} onSignout={async()=>{
@@ -35,3 +40,6 @@ interface props {
     </div>
   </div>
   }
+
+  export default dynamic (() => Promise.resolve(AppbarClient), {ssr: false, suspense: true})
+

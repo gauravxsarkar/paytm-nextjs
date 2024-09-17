@@ -8,10 +8,10 @@ export default function Layout({
     children: React.ReactNode;
   }>) {
     return (
-      <html lang="en">
-        <body>
+      
+      <div>
         {children}
-        </body>
-      </html>
+      </div>
+        
     );
 }

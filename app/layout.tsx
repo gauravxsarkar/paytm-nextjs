@@ -34,10 +34,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Providers>
-     
+      
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      > {children}</body>
+      > 
+      
+         <div className="min-w-screen min-h-screen bg-[#ebe6e6]">
+            <AppbarClient />
+            {children}
+          </div>
+          
+      </body>
       </Providers>
     </html>
   );
