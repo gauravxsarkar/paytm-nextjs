@@ -10,10 +10,10 @@ export const Sidebar = ({href , title }: {href : string, title: string})=> {
     const selected = pathname === href
 
     return (
-        <div onClick={()=> {
+        <div className={`flex ${selected ? "text-[#6a51a6]" : "text-slate-500"} cursor-pointer  p-2 pl-8`} onClick={()=> {
             router.push(href)
         }}>
-            <div>
+            <div className={`font-bold ${selected ? "text-[#6a51a6]" : "text-slate-500"}`}>
                 {title}
             </div>
         </div>
