@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import { Providers } from "./provider";
-import AppbarClient from "@/components/appbarClient";
+import AppbarClient from "../components/appbarClient";
 
 
 const geistSans = localFont({

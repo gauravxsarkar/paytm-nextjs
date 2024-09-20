@@ -37,38 +37,45 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var client_1 = require("@prisma/client");
+var bcrypt = require("bcrypt");
 var prisma = new client_1.PrismaClient();
 function main() {
     return __awaiter(this, void 0, void 0, function () {
-        var mohak;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, prisma.user.upsert({
-                        where: { email: "mohak@gmail.com" },
-                        update: {},
-                        create: {
-                            email: "mohak@gmail.com",
-                            password: "mohak",
-                            name: "mohak",
-                            Balance: {
+        var mohak, _a, _b;
+        var _c, _d;
+        return __generator(this, function (_e) {
+            switch (_e.label) {
+                case 0:
+                    _b = (_a = prisma.user).upsert;
+                    _c = {
+                        where: { email: "shami@gmail.com" },
+                        update: {}
+                    };
+                    _d = {
+                        email: "shami@gmail.com"
+                    };
+                    return [4 /*yield*/, bcrypt.hash("mohak", 10)];
+                case 1: return [4 /*yield*/, _b.apply(_a, [(_c.create = (_d.password = _e.sent(),
+                            _d.name = "shami",
+                            _d.Balance = {
                                 create: {
                                     amount: 900000,
                                     locked: 0
                                 }
                             },
-                            OnRampTransaction: {
+                            _d.OnRampTransaction = {
                                 create: {
                                     startTime: new Date(),
                                     status: "success",
                                     amount: 900000,
-                                    token: "token_1",
+                                    token: "token_2",
                                     provider: "sbi bank"
                                 }
-                            }
-                        }
-                    })];
-                case 1:
-                    mohak = _a.sent();
+                            },
+                            _d),
+                            _c)])];
+                case 2:
+                    mohak = _e.sent();
                     return [2 /*return*/];
             }
         });
