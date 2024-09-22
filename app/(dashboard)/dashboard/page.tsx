@@ -1,9 +1,11 @@
+import DashBoard from "@/components/dashboard";
+
 export default function Dashboard() {
     return (
         <div>
            
            <div>
-              hello
+              <DashBoard></DashBoard>
            </div>
 
         </div>

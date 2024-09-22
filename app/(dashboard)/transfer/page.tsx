@@ -27,19 +27,19 @@ export default function() {
             <h1 className="text-[3rem] font-bold ml-[3rem] mt-[3rem] text-purple-500">ONRAMP TRANSFER</h1>
 
 <div className="grid grid-cols-2 p-[8rem] w-[100vw]">
-      <div className="flex flex-col p-[3rem] ">
+      <div className="flex flex-col p-[3rem] bg-white rounded-lg">
         <h1 className="text-[2rem] font-bold">Add Money</h1>
 
-        <label htmlFor="" className="mt-[4rem]">Amount</label>
-        <input type="text" className="w-[20rem] mt-[10px]" onChange={(c : any)=> {
+        <label htmlFor="" className="mt-[4rem] font-semibold text-lg">Amount</label>
+        <input type="text" className="w-[20rem] mt-[10px] p-2 bg-slate-200 " onChange={(c : any)=> {
                setAmount(c.target.value);
         }} />
  
-        <label htmlFor="" className="mt-7">Bank</label>
+        <label htmlFor="" className="mt-7 font-semibold text-lg">Bank</label>
         <select
   name=""
   id=""
-  className="w-[20rem] mt-[10px] mb-8"
+  className="w-[20rem] mt-[10px] mb-8 p-2 bg-slate-200"
   onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value;
     const selectedBank = SupportedBanks.find((bank) => bank.name === value);

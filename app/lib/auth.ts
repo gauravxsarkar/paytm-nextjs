@@ -11,7 +11,8 @@ export const authOptions = {
           name: 'credentials',
           credentials: {
             email: { label: "email", type: "text", placeholder: "samyakhorny@horny.com", required: true },
-            password: { label: "Password", type: "password", required: true }
+            password: { label: "Password", type: "password", required: true },
+            name : { label: "name", type: "text"}
           },
           // TODO: User credentials type from next-aut
           async authorize(credentials: any) {
@@ -39,7 +40,8 @@ export const authOptions = {
                 const user = await prisma.user.create({
                     data: {
                         email: credentials.email,
-                        password: hashedPassword
+                        password: hashedPassword,
+                        name : credentials.name
                     }
                 });
             
