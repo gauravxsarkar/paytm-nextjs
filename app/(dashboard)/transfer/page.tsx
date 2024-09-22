@@ -1,6 +1,6 @@
 "use client"
 import CreateOnRampTransaction from "@/app/lib/actions/createOnRampTransactions"
-import TransCard from "@/components/genTransac"
+
 
 import { useState } from "react"
 
@@ -19,12 +19,12 @@ export default function() {
 
   console.log(provider);
 
-//
+
     return (
      
         <div>
 
-            <h1 className="text-[3rem] font-bold ml-[3rem] mt-[3rem] text-purple-500">TRANSFER</h1>
+            <h1 className="text-[3rem] font-bold ml-[3rem] mt-[3rem] text-purple-500">ONRAMP TRANSFER</h1>
 
 <div className="grid grid-cols-2 p-[8rem] w-[100vw]">
       <div className="flex flex-col p-[3rem] ">
@@ -54,8 +54,6 @@ export default function() {
     </option>
   ))}
 </select>
-
-
         <div className="flex justify-center items-center">
         <button className="bg-blue-500 font-semibold w-[12rem] p-[1rem] text-white rounded-full" onClick={async ()=> {
           await CreateOnRampTransaction(provider, amount )
@@ -63,13 +61,7 @@ export default function() {
           console.log("successful")
         }}>Add Money</button>
         </div>
-
-       
-
       </div>
-
-     
-
       </div>
     </div>
 

@@ -20,6 +20,8 @@ model User {
   name                 String?
   OnRampTransaction    OnRampTransactions[]
   Balance              Balance[]
+ receivedTransfers   p2pTransactions[]       @relation(name: "ToUserRelation")
+ sentTransfer p2pTransactions[] @relation(name: "FromUserRelation")
 }
 
 model OnRampTransactions {
@@ -39,6 +41,16 @@ model Balance {
   amount   Int
   locked   Int
   user     User   @relation(fields: [userId], references: [id])
+}
+
+model p2pTransactions {
+  id Int          @id @default(autoincrement())
+  amount            Int 
+  startTime         DateTime
+  fromUserId         Int
+  fromUser            User        @relation(name: "FromUserRelation", fields: [fromUserId], references: [id])
+  toUserId            Int
+  toUser              User         @relation(name: "ToUserRelation", fields: [toUserId], references: [id])
 }
 
 enum OnrampStatus {
