@@ -1,6 +1,8 @@
+import TransCard from "@/components/genTransac";
+
 
 export default function() {
     return <div>
-        transax page
+     <TransCard></TransCard>
     </div>
 }

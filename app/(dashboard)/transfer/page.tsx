@@ -1,5 +1,7 @@
 "use client"
 import CreateOnRampTransaction from "@/app/lib/actions/createOnRampTransactions"
+import TransCard from "@/components/genTransac"
+
 import { useState } from "react"
 
 const SupportedBanks = [{
@@ -66,21 +68,12 @@ export default function() {
 
       </div>
 
-      <div className="grid grid-flow-row grid-rows-2">
-
-        <div>
-            <h1>Balance</h1>
-            
-        </div>
-
-        <div>
-            <h1>recent Transactions</h1>
-        </div>
+     
 
       </div>
     </div>
 
-        </div>
+  
     
     )
 }
