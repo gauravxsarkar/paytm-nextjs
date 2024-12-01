@@ -34,7 +34,7 @@ interface props {
     return <div className="flex justify-between border-b px-4 pt-5 pb-3">
     <div className="text-lg flex flex-col justify-center">
       <div className="grid grid-cols-2">
-        <div className="text-[2rem] font-bold flex items-center ml-4 "> <span className="text-[2rem] font-extrabold text-violet-700">AJA</span> yaha <span className="text-[2rem] font-extrabold text-violet-700">PAY</span> kar </div>
+        <div className="text-[2rem] font-bold flex items-center ml-4 "> <span className="text-[2rem] font-extrabold text-violet-700">ONE</span>pay</div>
      
       </div>
     </div>
